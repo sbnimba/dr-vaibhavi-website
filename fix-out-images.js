@@ -17,12 +17,15 @@ function walk(dir) {
             }
 
             if (modified) {
-                console.log('Cleaned all /images/ references in:', fullPath);
+                console.log('Cleaned /images/ in:', fullPath);
                 fs.writeFileSync(fullPath, content, 'utf8');
             }
         }
     }
 }
 
-walk(path.join(__dirname, 'out'));
-console.log('Complete cleanup of all /images/ references complete!');
+const outDir = path.join(__dirname, 'out');
+if (fs.existsSync(outDir)) {
+    walk(outDir);
+    console.log('Post-export cleanup complete!');
+}
