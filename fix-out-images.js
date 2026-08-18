@@ -11,22 +11,13 @@ function walk(dir) {
             let content = fs.readFileSync(fullPath, 'utf8');
             let modified = false;
 
-            // Replace href="/images/ and src="/images/ with relative images/
-            if (content.includes('src="/images/')) {
-                content = content.replaceAll('src="/images/', 'src="images/');
-                modified = true;
-            }
-            if (content.includes('href="/images/')) {
-                content = content.replaceAll('href="/images/', 'href="images/');
-                modified = true;
-            }
-            if (content.includes('href="/dr-vaibhavi-website/images/')) {
-                content = content.replaceAll('href="/dr-vaibhavi-website/images/', 'href="images/');
+            if (content.includes('/images/')) {
+                content = content.replaceAll('/images/', 'images/');
                 modified = true;
             }
 
             if (modified) {
-                console.log('Fixed image paths in:', fullPath);
+                console.log('Cleaned all /images/ references in:', fullPath);
                 fs.writeFileSync(fullPath, content, 'utf8');
             }
         }
@@ -34,4 +25,4 @@ function walk(dir) {
 }
 
 walk(path.join(__dirname, 'out'));
-console.log('Post-export image path fix complete!');
+console.log('Complete cleanup of all /images/ references complete!');
