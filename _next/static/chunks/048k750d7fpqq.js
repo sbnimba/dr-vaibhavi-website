@@ -17,7 +17,7 @@
 `,e.rescheduleNote?r+=`- Note: ${e.rescheduleNote}
 `:e.rejectNote&&(r+=`- Note: ${e.rejectNote}
 `),r+=`
-Should you need to change your appointment or have any questions, please contact us at +91 91361 68582 / +91 85912 37628.
+Should you need to change your appointment or have any questions, please contact us at +91 93218 80359.
 
 Best regards,
 Dr. Vaibhavi Clinic Team
