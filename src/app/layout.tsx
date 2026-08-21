@@ -24,7 +24,7 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Dr. Vaibhavi | Obstetrician & Gynaecologist, Navi Mumbai",
+    default: "Dr. Vaibhavi | Obstetrician & Gynaecologist",
     template: "%s | Dr. Vaibhavi",
   },
   description: DESCRIPTION,
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: SITE_NAME,
-    title: "Dr. Vaibhavi | Obstetrician & Gynaecologist, Navi Mumbai",
+    title: "Dr. Vaibhavi | Obstetrician & Gynaecologist",
     description: DESCRIPTION,
     url: SITE_URL,
     locale: "en_IN",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dr. Vaibhavi | Obstetrician & Gynaecologist, Navi Mumbai",
+    title: "Dr. Vaibhavi | Obstetrician & Gynaecologist",
     description: DESCRIPTION,
     images: [OG_IMAGE],
   },

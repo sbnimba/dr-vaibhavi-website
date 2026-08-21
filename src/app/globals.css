@@ -89,3 +89,39 @@ body { top: 0 !important; }
     scrollbar-width: thin;
     scrollbar-color: rgba(236, 72, 153, 0.25) transparent;
 }
+
+/* Mobile refinements (max-width 639px) */
+@media (max-width: 639px) {
+  .text-\[8px\], .text-\[9px\], .text-\[10px\], .text-\[11px\] { font-size: 0.75rem; line-height: 1.35; }
+  .text-\[8px\].whitespace-nowrap, .text-\[9px\].whitespace-nowrap, .text-\[10px\].whitespace-nowrap, .text-\[11px\].whitespace-nowrap { white-space: normal; }
+  .tracking-widest { letter-spacing: 0.04em; }
+  footer a:not([class*="flex"]), nav a:not([class*="flex"]), li > a:not([class*="flex"]), div > a:not([class*="flex"]):not([class*="rounded-full"]):not([class*="py-"]), section > a:not([class*="flex"]) { display: inline-block; padding-top: 0.4rem; padding-bottom: 0.4rem; }
+  header button, header a, button[type="submit"] { min-height: 44px; }
+  #navbar > div > a[href="#home"], #navbar > div > a[href="#home"] > div { min-width: 0; }
+  #navbar > div > a[href="#home"] p { display: none; }
+  div[class*="top-[64px]"] { background-color: #fff; }
+}
+
+/* Free-flowing scroll everywhere. Nav links still land exactly on
+   each section top, so alignment survives without the resistance. */
+html.snap-mandatory { scroll-snap-type: none; }
+section.snap-always { scroll-snap-stop: normal; }
+
+/* Phones and tablets: sections size to their content, no full-screen pages,
+   and no section is its own scroll container. overflow-x:clip on the hero
+   still clips the decorative blobs without trapping the gesture. */
+@media (max-width: 1023px) {
+  section.min-h-screen { min-height: auto; }
+  section.snap-always { overflow: visible; }
+  #home { overflow-x: clip; overflow-y: visible; }
+}
+
+/* Mobile hero leads with the doctor's portrait */
+@media (max-width: 1023px) {
+  #home > div > .grid > div:first-child { order: 2; }
+  #home > div > .grid > div:nth-child(2) { order: 1; margin-top: 0; }
+  #home img + div { width: calc(100% - 1rem); max-width: none; justify-content: center; padding: 0.5rem 0.75rem; }
+}
+@media (max-width: 639px) {
+  #home > div > .grid > div:nth-child(2) > div:nth-child(2) { max-width: 250px; max-height: 250px; }
+}

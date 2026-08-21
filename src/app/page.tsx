@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import AOS from 'aos';
 import LeadCaptureForm from '@/components/LeadCaptureForm';
+import PregnancyGame from '@/components/PregnancyGame';
 import 'swiper/css/bundle';
 import Swiper from 'swiper/bundle';
 import { supabase } from '@/lib/supabase';
@@ -901,6 +902,11 @@ export default function Home() {
                     <i className="fa-brands fa-youtube text-base"></i> Watch on YouTube
                 </a>
             </div>
+
+            {/* Interactive Pregnancy Journey Game */}
+            <div data-aos="fade-up" data-aos-delay="250" className="text-left max-w-5xl mx-auto">
+                <PregnancyGame />
+            </div>
             
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 text-left" data-aos="fade-up" data-aos-delay="300">
                 {/* Card 1 */}
@@ -1333,7 +1339,7 @@ export default function Home() {
                                         <span>Automated Notifications Dispatched:</span>
                                     </div>
                                     <ul className="list-disc list-inside text-[10px] text-emerald-700 space-y-0.5 pt-0.5 font-medium">
-                                        <li>Email sent to: <strong>IndiasBestGynaecologist@gmail.com</strong></li>
+                                        <li>Email sent to: <strong>drvaibhavicare@gmail.com</strong></li>
                                         <li>Confirmation sent to: <strong>{bookedAppointment?.emailAddress}</strong></li>
                                         <li>Background alert synced to Doctor Portal</li>
                                     </ul>
@@ -1667,7 +1673,7 @@ export default function Home() {
                             </li>
                             <li className="flex items-center gap-2">
                                 <i className="fa-solid fa-envelope text-primary-500"></i>
-                                <span>consult@drvaibhavi.com</span>
+                                <span>drvaibhavicare@gmail.com</span>
                             </li>
                         </ul>
                     </div>

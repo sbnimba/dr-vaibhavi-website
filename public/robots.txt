@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /patient-portal
 
 Sitemap: https://drvaibhavicare.com/sitemap.xml
