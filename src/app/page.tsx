@@ -4,7 +4,6 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import AOS from 'aos';
 import LeadCaptureForm from '@/components/LeadCaptureForm';
-import PregnancyGame from '@/components/PregnancyGame';
 import 'swiper/css/bundle';
 import Swiper from 'swiper/bundle';
 import { supabase } from '@/lib/supabase';
@@ -901,11 +900,6 @@ export default function Home() {
                 <a href="https://www.youtube.com/@DrVaibhavicare" target="_blank" className="bg-red-600 text-white px-5 py-2.5 rounded-full font-bold shadow-md hover:shadow-lg transition flex items-center gap-2 text-xs sm:text-sm">
                     <i className="fa-brands fa-youtube text-base"></i> Watch on YouTube
                 </a>
-            </div>
-
-            {/* Interactive Pregnancy Journey Game */}
-            <div data-aos="fade-up" data-aos-delay="250" className="text-left max-w-5xl mx-auto">
-                <PregnancyGame />
             </div>
             
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 text-left" data-aos="fade-up" data-aos-delay="300">
